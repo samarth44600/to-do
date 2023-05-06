@@ -1,0 +1,26 @@
+// Task list styling
+.tasksListDiv {
+  width: 60%;
+  height: 80%;
+  margin-top: 17rem;
+
+}
+
+// Task styling
+.taskDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .task {
+    .taskText {
+      font-size: 2.2rem;
+      // font-weight: 600;
+    }
+  }
+  .taskMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

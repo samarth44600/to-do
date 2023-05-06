@@ -6,9 +6,29 @@ type Props = {};
 const TaskLists = (props: Props) => {
   return (
     <div className={styles.tasksListDiv}>
-      <div className={styles.taskDiv}>
-        <Task />
-      </div>
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
     </div>
   );
 };
