@@ -29,6 +29,8 @@ const TaskLists = (props: Props) => {
       <Task />
       <Task />
       <Task />
+      <Task />
+      <Task />
     </div>
   );
 };

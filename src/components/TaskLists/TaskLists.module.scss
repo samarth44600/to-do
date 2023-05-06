@@ -3,24 +3,33 @@
   width: 60%;
   height: 80%;
   margin-top: 17rem;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 // Task styling
 .taskDiv {
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border: 3px solid grey;
+  border-radius: 7px;
+  padding: 1rem 2rem;
   .task {
     .taskText {
       font-size: 2.2rem;
-      // font-weight: 600;
+      outline: none;
+      overflow-y: hidden;
     }
   }
   .taskMenu {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 6px;
   }
 }

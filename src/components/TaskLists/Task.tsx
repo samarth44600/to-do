@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import styles from "./TaskLists.module.scss";
 import MenuButtons from "../Buttons/MenuButtons/MenuButtons";
+import { Icon } from "@iconify/react";
 
 type Props = {};
 
@@ -8,12 +10,19 @@ const Task = (props: Props) => {
   return (
     <div className={styles.taskDiv}>
       <div className={styles.task}>
-        <span className={styles.taskText}>Task 1</span>
+        <p className={styles.taskText}>Task 1</p>
       </div>
       <div className={styles.taskMenu}>
-        <MenuButtons name="Completed" />
-        <MenuButtons name="Completed" />
-        <MenuButtons name="Completed" />
+        <MenuButtons name={<Icon icon="material-symbols:edit-outline" />} />
+        <MenuButtons  name={<Icon icon="charm:tick-double" />} />
+        <MenuButtons
+        //   bgColor="blue"
+          name={<Icon icon="ic:round-star-border" />}
+        />
+        <MenuButtons
+        //   bgColor="red"
+          name={<Icon icon="ic:outline-delete-forever" />}
+        />
       </div>
     </div>
   );
