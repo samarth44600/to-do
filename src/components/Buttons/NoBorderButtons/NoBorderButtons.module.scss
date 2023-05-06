@@ -1,0 +1,18 @@
+.noBorderButtonsDiv {
+    font-size: 2rem;
+    padding: 1rem;
+    border:none;
+    background-color: inherit;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    &:hover{
+        color: #c4c4c4;
+    }
+
+    &:active{
+        scale: 0.9;
+        font-size: 1.999rem;
+        
+    }
+  }
+  
