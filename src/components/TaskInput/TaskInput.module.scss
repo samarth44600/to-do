@@ -1,0 +1,21 @@
+.taskInputDiv{
+    width: 60%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .taskInput{
+        width: 70%;
+        height: 100%;
+        background-color: inherit;
+        border:none;
+        padding: 0 1rem;
+        border-bottom: 2px solid #c4c4c4; 
+        font-size: 2.9rem;
+        // font-family: "Nunito", sans-serif;
+        text-align: left;
+        outline: none;
+    }
+}

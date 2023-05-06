@@ -1,0 +1,19 @@
+.addNewButton{
+    width:13rem;
+    background-color: rgb(36, 174, 33);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 9px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background-color: rgb(36, 174, 33, 0.8);
+    }
+    &:active{
+        padding:7px;
+        font-size: 1.5rem;
+    }
+}
