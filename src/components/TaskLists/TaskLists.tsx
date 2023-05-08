@@ -7,30 +7,6 @@ const TaskLists = (props: Props) => {
   return (
     <div className={styles.tasksListDiv}>
       <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
-      <Task />
     </div>
   );
 };
