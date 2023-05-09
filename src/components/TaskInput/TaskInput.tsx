@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./TaskInput.module.scss";
 import AddNewButton from "../Buttons/AddNewButton/AddNewButton";
 import { useDispatch } from "react-redux";
-import { setTask } from "@/redux/slices/taskSlice";
+import { addTask } from "@/redux/slices/taskSlice";
 type Props = {};
 
 const TaskInput = (props: Props) => {
@@ -17,7 +17,7 @@ const TaskInput = (props: Props) => {
     isImportant: false,
   };
   const handleTaskSubmit = () => {
-    dispatch(setTask(data));
+    dispatch(addTask(data));
     console.log("task submitted", data);
   };
   return (

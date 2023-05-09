@@ -22,12 +22,12 @@ export const taskSlice = createSlice({
     name: "page",
     initialState,
     reducers: {
-        setTask: (state, action: PayloadAction<ITaskDetailState>) => {
+        addTask: (state, action: PayloadAction<ITaskDetailState>) => {
             state.task.push(action.payload);
         }
     }
 });
 
-export const { setTask } = taskSlice.actions;
+export const { addTask } = taskSlice.actions;
 
 export default taskSlice.reducer;

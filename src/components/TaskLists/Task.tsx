@@ -4,13 +4,16 @@ import styles from "./TaskLists.module.scss";
 import MenuButtons from "../Buttons/MenuButtons/MenuButtons";
 import { Icon } from "@iconify/react";
 
-type Props = {};
+type Props = {
+  task: any;
 
-const Task = (props: Props) => {
+};
+
+const Task = ({task}: Props) => {
   return (
     <div className={styles.taskDiv}>
       <div className={styles.task}>
-        <p className={styles.taskText}>Task 1</p>
+        <p className={styles.taskText}>{task}</p>
       </div>
       <div className={styles.taskMenu}>
         <MenuButtons name={<Icon icon="material-symbols:edit-outline" />} />
