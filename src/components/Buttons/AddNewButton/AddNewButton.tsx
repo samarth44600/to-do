@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./AddNewButton.module.scss";
-type Props = {};
+type Props = {
+  onClick?: () => void;
 
-const AddNewButton = (props: Props) => {
-  return <button className={styles.addNewButton}>+ Add New</button>;
+};
+
+const AddNewButton = ({onClick}: Props) => {
+  return <button className={styles.addNewButton} onClick={onClick} >+ Add New</button>;
 };
 
 export default AddNewButton;
