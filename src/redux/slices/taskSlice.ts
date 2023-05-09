@@ -33,10 +33,22 @@ export const taskSlice = createSlice({
                 isCompleted: false,
             }
             state.task.push(newTask);
+        },
+        deleteTask: (state, action: PayloadAction<number>) => {
+            const index = state.task.findIndex((item) => item.id === action.payload);
+            if (index !== -1) {
+                state.task.splice(index, 1);
+            }
+
+
+
         }
+
+
+
     }
 });
 
-export const { addTask } = taskSlice.actions;
+export const { addTask, deleteTask } = taskSlice.actions;
 
 export default taskSlice.reducer;
