@@ -16,13 +16,15 @@ const TaskInput = (props: Props) => {
     isCompleted: false,
     isImportant: false,
   };
-  const handleTaskSubmit = () => {
+  const handleTaskSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     dispatch(addTask(data));
     console.log("task submitted", data);
+    setNewTask("");
   };
   return (
     <div className={styles.taskInputDiv}>
-      <div className={styles.taskInput}>
+      <form onSubmit={handleTaskSubmit} className={styles.taskInput}>
         <input
           className={styles.input}
           type="text"
@@ -33,8 +35,8 @@ const TaskInput = (props: Props) => {
           onChange={(e) => setNewTask(e.target.value)}
           autoFocus
         />
-        <AddNewButton onClick={handleTaskSubmit} />
-      </div>
+        <AddNewButton type="submit" />
+      </form>
     </div>
   );
 };

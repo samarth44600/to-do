@@ -19,11 +19,20 @@ const initialState: ITask = {
 }
 
 export const taskSlice = createSlice({
-    name: "page",
+    name: "task",
     initialState,
     reducers: {
         addTask: (state, action: PayloadAction<ITaskDetailState>) => {
-            state.task.push(action.payload);
+            // let lastId = state.task[state.task.length - 1] ? state.task[state.task.length - 1].id : 0;
+            // console.log("is of last task", lastId);
+
+            const newTask = {
+                id: state.task.length + 1,
+                description: action.payload.description,
+                isImportant: false,
+                isCompleted: false,
+            }
+            state.task.push(newTask);
         }
     }
 });
