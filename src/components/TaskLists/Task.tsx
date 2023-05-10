@@ -9,6 +9,7 @@ import {
   setCompleted,
   setImportant,
   setIncomplete,
+  setNotImportant,
 } from "@/redux/slices/taskSlice";
 
 type Props = {
@@ -32,7 +33,7 @@ const Task = ({ id, description, isCompleted, isImportant }: Props) => {
 
   const handleImportant = (id: number) => {
     console.log("important id ", id);
-    dispatch(setImportant(id));
+    isImportant ? dispatch(setNotImportant(id)) : dispatch(setImportant(id));
   };
 
   const handleDelete = (id: number) => {

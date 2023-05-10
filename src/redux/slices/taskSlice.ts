@@ -63,11 +63,19 @@ export const taskSlice = createSlice({
             const index = state.task.findIndex((item) => item.id === action.payload);
             if (index !== -1) {
                 state.task[index].isImportant = !state.task[index].isImportant;
+                state.task.unshift(state.task.splice(index, 1)[0]);
             }
-        }
+        },
+        setNotImportant: (state, action: PayloadAction<number>) => {
+            const index = state.task.findIndex((item) => item.id === action.payload);
+            if (index !== -1) {
+                state.task[index].isImportant = !state.task[index].isImportant;
+                state.task.push(state.task.splice(index, 1)[0]);
+            }
+        },
     }
 });
 
-export const { addTask, deleteTask, setCompleted, setIncomplete, setImportant } = taskSlice.actions;
+export const { addTask, deleteTask, setCompleted, setIncomplete, setImportant, setNotImportant } = taskSlice.actions;
 
 export default taskSlice.reducer;
