@@ -1,3 +1,4 @@
+'use client'
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 import "./globals.css";
@@ -5,7 +6,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+ const metadata = {
   title: "To-Do",
   description: "To-Do app created to manage your tasks.",
 };
