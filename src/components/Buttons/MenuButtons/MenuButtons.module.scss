@@ -1,0 +1,17 @@
+.menuButtonsDiv {
+  font-size: 2.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in;
+  &:hover {
+    color: #c4c4c4;
+  }
+  &:active {
+    scale: 0.9;
+    font-size: 1.999rem;
+  }
+}
