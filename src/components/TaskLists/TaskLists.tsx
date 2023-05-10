@@ -12,9 +12,13 @@ const TaskLists = (props: Props) => {
   console.log("task", task);
   return (
     <div className={styles.tasksListDiv}>
-      {task.map((data: any, index: number) => (
-        <Task key={index} {...data} />
-      ))}
+      {task != 0 ? (
+        task.map((data: any, index: number) => <Task key={index} {...data} />)
+      ) : (
+        <div className={styles.noTaskDiv}>
+          <p className={styles.noTaskText}>No task added yet</p>
+        </div>
+      )}
     </div>
   );
 };
