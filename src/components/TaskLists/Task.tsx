@@ -22,9 +22,9 @@ type Props = {
 const Task = ({ id, description, isCompleted, isImportant }: Props) => {
   const dispatch = useDispatch();
 
-  const handleEdit = (id: number) => {
-    console.log("edit id ", id);
-  };
+  // const handleEdit = (id: number) => {
+  //   console.log("edit id ", id);
+  // };
 
   const handleComplete = (id: number) => {
     console.log("complete id ", id);
@@ -50,12 +50,12 @@ const Task = ({ id, description, isCompleted, isImportant }: Props) => {
         <p className={styles.taskText}>{description}</p>
       </div>
       <div className={styles.taskMenu}>
-        <button
+        {/* <button
           className={`${styles.menuButtonsDiv}`}
           onClick={() => handleEdit(id)}
         >
           <Icon icon="material-symbols:edit-outline" />
-        </button>
+        </button> */}
         <button
           className={styles.menuButtonsDiv}
           onClick={() => handleComplete(id)}
@@ -67,7 +67,11 @@ const Task = ({ id, description, isCompleted, isImportant }: Props) => {
           className={styles.menuButtonsDiv}
           onClick={() => handleImportant(id)}
         >
-          <Icon icon="ic:round-star-border" />
+          {isImportant ? (
+            <Icon icon="ic:round-star" />
+          ) : (
+            <Icon icon="ic:round-star-border" />
+          )}
         </button>
 
         <button

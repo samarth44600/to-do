@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     border: 3px solid grey;
     border-radius: 7px;
     padding: 1rem 2rem;
@@ -81,6 +81,16 @@
     }
   }
   .important {
-    border: 2px solid red;
+    
+    
+
+    .taskMenu{
+      .menuButtonsDiv{
+        color: white;
+        &:hover{
+          color: #c4c4c4;
+        }
+      }
+    }
   }
 }
