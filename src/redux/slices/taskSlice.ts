@@ -12,10 +12,12 @@ interface ITaskStates extends Array<ITaskDetailState> { }
 
 interface ITask {
     task: ITaskStates;
+    completedTask: ITaskStates;
 }
 
 const initialState: ITask = {
     task: [],
+    completedTask: [],
 }
 
 export const taskSlice = createSlice({
@@ -44,6 +46,17 @@ export const taskSlice = createSlice({
             const index = state.task.findIndex((item) => item.id === action.payload);
             if (index !== -1) {
                 state.task[index].isCompleted = !state.task[index].isCompleted;
+                state.completedTask.push(state.task[index]);
+                state.task.splice(index, 1);
+
+            }
+        },
+        setIncomplete: (state, action: PayloadAction<number>) => {
+            const index = state.completedTask.findIndex((item) => item.id === action.payload);
+            if (index !== -1) {
+                state.completedTask[index].isCompleted = !state.completedTask[index].isCompleted;
+                state.task.push(state.completedTask[index]);
+                state.completedTask.splice(index, 1);
             }
         },
         setImportant: (state, action: PayloadAction<number>) => {
@@ -55,6 +68,6 @@ export const taskSlice = createSlice({
     }
 });
 
-export const { addTask, deleteTask, setCompleted, setImportant } = taskSlice.actions;
+export const { addTask, deleteTask, setCompleted, setIncomplete, setImportant } = taskSlice.actions;
 
 export default taskSlice.reducer;
