@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 import "./globals.css";
@@ -19,6 +19,12 @@ export default function RootLayout({
   return (
     <Provider store={store}>
       <html lang="en">
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="description" content={metadata.description} />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>{metadata.title}</title>
+        </head>
         <body className={inter.className}>{children}</body>
       </html>
     </Provider>
